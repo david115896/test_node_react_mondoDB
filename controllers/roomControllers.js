@@ -7,7 +7,7 @@ export const indexRooms = async (req, res) => {
 
 export const showRoom = async (req, res) => {
     try{
-        const room = await RoomModel.find({_id: req.params.id}) // RoomModel.find({name: "Room 1"})
+        const room = await RoomModel.findOne({_id: req.params.id}) // RoomModel.find({name: "Room 1"})
         res.send(room)
     }
     catch(err){
